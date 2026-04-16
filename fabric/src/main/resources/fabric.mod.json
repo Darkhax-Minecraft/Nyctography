@@ -1,47 +1,47 @@
 {
   "schemaVersion": 1,
-  "id": "${mod_id}",
-  "version": "${version}",
-  "name": "${mod_name}",
-  "description": "${mod_description}",
+  "id": "nyctography",
+  "version": "26.1.2.0",
+  "name": "Nyctography",
+  "description": "Adds a Nyctography font set to Minecraft.",
   "authors": [
-    "${mod_author}"
+    "Darkhax"
   ],
   "contributors": [
     "This project is made possible with Patreon support from players like you. Thank you!",
-    "${patreon_pledges}"
+    "lothrazar, techsquirrel, Keyana , Darkosto, Tobias Ward, noobanidus"
   ],
   "contact": {
-    "sources": "${mod_repo}",
-    "issues": "${mod_repo}/issues",
-    "homepage": "${curse_page}"
+    "sources": "https://github.com/Darkhax-Minecraft/nyctography",
+    "issues": "https://github.com/Darkhax-Minecraft/nyctography/issues",
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/nyctography"
   },
-  "license": "${mod_license}",
-  "icon": "logo_${mod_id}.png",
-  "environment": "${mod_target_environment}",
+  "license": "ARR",
+  "icon": "logo_nyctography.png",
+  "environment": "*",
   "entrypoints": {
     "main": [
-      "net.darkhax.nyctography.fabric.impl.FabricMod"
+      "net.darkhax.nyctography.fabric.NyctographyFabric"
+    ],
+    "client": [
+      "net.darkhax.nyctography.fabric.NyctographyFabricClient"
     ]
   },
   "mixins": [
-    "${mod_id}.mixins.json",
-    "${mod_id}.fabric.mixins.json"
+    "nyctography.common.mixins.json",
+    "nyctography.fabric.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=${fabric_loader_version}",
+    "fabricloader": ">=0.18.6",
     "fabric-api": "*",
-    "minecraft": "${minecraft_version}",
-    "java": ">=${java_version}",
-    "bookshelf": ">=${bookshelf_version}",
-    "prickle": ">=${prickle_version}"
+    "minecraft": ">=26.1",
+    "java": ">=25"
   },
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.curseforge": "${curse_page}",
-        "modmenu.modrinth": "${modrinth_page}",
-        "modmenu.patreon": "${patreon_url}?${mod_id}"
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/nyctography",
+        "modmenu.modrinth": "https://modrinth.com/mod/nyctography"
       }
     }
   }

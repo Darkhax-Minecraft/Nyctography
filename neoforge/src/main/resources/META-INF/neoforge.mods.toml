@@ -1,49 +1,36 @@
 modLoader = "javafml"
-loaderVersion = "${neoforge_loader_version_range}"
-license = "${mod_license}"
-issueTrackerURL = "${mod_repo}/issues"
+license = "ARR"
+issueTrackerURL = "https://github.com/Darkhax-Minecraft/nyctography/issues"
 
 [[mods]]
-modId = "${mod_id}"
-version = "${version}"
-displayName = "${mod_name}"
-updateJSONURL = "https://updates.blamejared.com/get?n=${mod_id}&gv=${minecraft_version}&ml=${platform}"
-displayURL = "${curse_page}"
-logoFile = "logo_${mod_id}.png"
-credits = "This project is made possible with Patreon support from players like you. Thank you! ${patreon_pledges}"
-authors = "${mod_author}"
-description = "${mod_description}"
+modId = "nyctography"
+version = "26.1.2.0"
+displayName = "Nyctography"
+updateJSONURL = "https://updates.blamejared.com/get?n=nyctography&gv=26.1.2&ml=neoforge"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/nyctography"
+logoFile = "logo_nyctography.png"
+logoBlur = false
+credits = "This project is made possible with Patreon support from players like you. Thank you! lothrazar, techsquirrel, Keyana , Darkosto, Tobias Ward, noobanidus"
+authors = "Darkhax"
+description = "Adds a Nyctography font set to Minecraft."
 
 [[mixins]]
-config = "${mod_id}.mixins.json"
+config = "nyctography.common.mixins.json"
 
 [[mixins]]
-config = "${mod_id}.neoforge.mixins.json"
+config = "nyctography.neoforge.mixins.json"
 
-[[dependencies.${ mod_id }]]
-modId = "neoforge"
-type = "required"
-versionRange = "[${neoforge_version},)"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.${ mod_id }]]
+[[dependencies.nyctography]]
 modId = "minecraft"
 type = "required"
-versionRange = "${minecraft_version_range}"
+versionRange = "26.1"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.${ mod_id }]]
-modId = "bookshelf"
+[[dependencies.nyctography]]
+modId = "neoforge"
 type = "required"
-versionRange = "${bookshelf_version_range}"
+versionRange = "[26.1.0.1-beta,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.${ mod_id }]]
-modId = "prickle"
-type = "required"
-versionRange = "${prickle_version_range}"
-ordering = "NONE"
-side = "BOTH"

@@ -1,0 +1,41 @@
+{
+  "mod": {
+    "name": "Nyctography",
+    "group": "net.darkhax.nyctography",
+    "authors": [
+      "Darkhax"
+    ],
+    "id": "nyctography",
+    "license": "ARR",
+    "description": "Adds a Nyctography font set to Minecraft.",
+    "repo": "https://github.com/Darkhax-Minecraft/nyctography",
+    "client": false
+  },
+  "curseforge": {
+    "slug": "nyctography",
+    "id": "1126493"
+  },
+  "modrinth": {
+    "slug": "nyctography",
+    "id": "ViRnT7xw"
+  },
+  "dependencies": [
+    {
+      "name": "Bookshelf",
+      "type": "required",
+      "maven": {
+        "common": "net.darkhax.bookshelf:bookshelf-common-26.1.2:26.1.2.3",
+        "neoforge": "net.darkhax.bookshelf:bookshelf-neoforge-26.1.2:26.1.2.3",
+        "fabric": "net.darkhax.bookshelf:bookshelf-fabric-26.1.2:26.1.2.3"
+      },
+      "curseforge": {
+        "slug": "bookshelf",
+        "id": "228525"
+      },
+      "modrinth": {
+        "slug": "bookshelf-lib",
+        "id": "uy4Cnpcm"
+      }
+    }
+  ]
+}

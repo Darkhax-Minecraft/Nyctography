@@ -1,38 +1,20 @@
 package net.darkhax.nyctography.common.impl;
 
-import com.mojang.serialization.MapCodec;
-import net.darkhax.bookshelf.common.api.data.conditions.ILoadCondition;
-import net.darkhax.bookshelf.common.api.entity.villager.trades.VillagerOffers;
 import net.darkhax.bookshelf.common.api.registry.ContentProvider;
-import net.darkhax.bookshelf.common.api.registry.adapters.GameRegistryAdapter;
-import net.darkhax.bookshelf.common.api.registry.adapters.GenericRegistryAdapter;
-import net.darkhax.bookshelf.common.impl.registry.adapter.VillagerTradeAdapter;
-import net.darkhax.nyctography.common.impl.config.TradeConfig;
-import net.darkhax.nyctography.common.impl.data.conditions.ConfigProperty;
+import net.darkhax.bookshelf.common.impl.registry.adapter.ItemRegistryAdapter;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.BannerPatternItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 
 public class Content implements ContentProvider {
 
-    @Override
-    public void defineItems(GameRegistryAdapter<Item> registry) {
-        registry.add("nyctography_pattern", new BannerPatternItem(TagKey.create(Registries.BANNER_PATTERN, NyctographyMod.id("pattern_item/nyctography")), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
-    }
+    public static final Identifier BANNER_PATTERN_TAG = NyctographyMod.id("pattern_item/nyctography");
 
     @Override
-    public void defineTrades(VillagerTradeAdapter registry) {
-        final TradeConfig config = NyctographyMod.CONFIG.banner_stencil_trade;
-        if (config.enabled) {
-            registry.addWanderingTrade(new VillagerOffers(config.tradeOffer), config.is_rare);
-        }
-    }
-
-    @Override
-    public void defineLoadConditions(GenericRegistryAdapter<MapCodec<? extends ILoadCondition>> registry) {
-        registry.add(ConfigProperty.TYPE_ID, ConfigProperty.CODEC);
+    public void defineItems(ItemRegistryAdapter registry) {
+        registry.addSimple("nyctography_pattern", props -> props.stacksTo(1).rarity(Rarity.UNCOMMON).delayedComponent(DataComponents.PROVIDES_BANNER_PATTERNS, ctx -> ctx.getOrThrow(TagKey.create(Registries.BANNER_PATTERN, BANNER_PATTERN_TAG))));
     }
 
     @Override
