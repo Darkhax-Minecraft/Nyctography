@@ -1,5 +1,5 @@
 <!-- name-start -->
-# Nyctography [![CurseForge Project](https://img.shields.io/curseforge/dt/1126493?logo=curseforge&label=CurseForge&style=flat-square&labelColor=2D2D2D&color=555555)](https://www.curseforge.com/minecraft/mc-mods/nyctography) [![Modrinth Project](https://img.shields.io/modrinth/dt/ViRnT7xw?logo=modrinth&label=Modrinth&style=flat-square&labelColor=2D2D2D&color=555555)](https://modrinth.com/mod/nyctography) [![Maven Project](https://img.shields.io/maven-metadata/v?style=flat-square&logoColor=D31A38&labelColor=2D2D2D&color=555555&label=Latest&logo=gradle&metadataUrl=https%3A%2F%2Fmaven.blamejared.com%2Fnet%2Fdarkhax%2Fnyctography%2Fnyctography-common-26.1.2%2Fmaven-metadata.xml)](https://maven.blamejared.com/net/darkhax/nyctography)
+# Nyctography [![CurseForge Project](https://img.shields.io/curseforge/dt/1126493?logo=curseforge&label=CurseForge&style=flat-square&labelColor=2D2D2D&color=555555)](https://www.curseforge.com/minecraft/mc-mods/nyctography) [![Modrinth Project](https://img.shields.io/modrinth/dt/ViRnT7xw?logo=modrinth&label=Modrinth&style=flat-square&labelColor=2D2D2D&color=555555)](https://modrinth.com/mod/nyctography) [![Maven Project](https://img.shields.io/maven-metadata/v?style=flat-square&logoColor=D31A38&labelColor=2D2D2D&color=555555&label=Latest&logo=gradle&metadataUrl=https%3A%2F%2Fmaven.blamejared.com%2Fnet%2Fdarkhax%2Fnyctography%2Fnyctography-common-26.2%2Fmaven-metadata.xml)](https://maven.blamejared.com/net/darkhax/nyctography)
 <!-- name-end -->
 
 <!-- description-start -->
@@ -22,11 +22,11 @@ repositories {
 
 dependencies {
      // NeoForge
-     implementation group: 'net.darkhax.nyctography', name: 'nyctography-neoforge-26.1.2', version: '26.1.2.0'
+     implementation group: 'net.darkhax.nyctography', name: 'nyctography-neoforge-26.2', version: '26.2.0.0'
      // Fabric
-     implementation group: 'net.darkhax.nyctography', name: 'nyctography-fabric-26.1.2', version: '26.1.2.0'
+     implementation group: 'net.darkhax.nyctography', name: 'nyctography-fabric-26.2', version: '26.2.0.0'
      // Common / MultiLoader / Vanilla / No Loader
-     implementation group: 'net.darkhax.nyctography', name: 'nyctography-common-26.1.2', version: '26.1.2.0'
+     implementation group: 'net.darkhax.nyctography', name: 'nyctography-common-26.2', version: '26.2.0.0'
 }
 ```
 
@@ -34,7 +34,7 @@ dependencies {
 
 <!-- sponsor-start -->
 ## Sponsors
-[![](https://assets.blamejared.com/nodecraft/darkhax.jpg)](https://nodecraft.com/r/darkhax)
+[![](https://assets.blamejared.com/nodecraft/darkhax.jpg)](https://nodecraft.com/r/darkhax)    
 Nyctography is proudly sponsored by Nodecraft! Play your favorite games with your friends using their high
 performance game servers! Use code **[DARKHAX](https://nodecraft.com/r/darkhax)** for 30% off your first
 month of service!
